@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      
+      <section class="AllElems">
+        <nav>
+          <h1>Productivity App</h1>
+          <button class="change">Theam</button>
+        </nav>
+        <div class="allContainer">
+          <div class="weather">
+            <header class="user-status-header">
+        <div class="status-top-row">
+            <span class="day-display" id="day-text">FRIDAY</span>
+            <span class="user-name-display" id="name-output">Alex</span>
+            <button class="edit-name-btn" id="open-modal" title="Change Name">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+            </button>
+        </div>
+        <div class="time-engine">
+            <span id="time-main">00:00</span>
+            <span class="time-seconds" id="time-seconds">00</span>
+        </div>
+    </header>
+          </div>
+          <div class="elemsContainer">
+            <div class="todo elem card" id="0">
+              <img
+                src="https://i.pinimg.com/736x/1a/4c/fe/1a4cfeb98b5d23167ba591be2b649349.jpg"
+                alt=""
+              />
+              <h1>To do List</h1>
+            </div>
+            <div class="daily elem card" id="1">
+              <img
+                src="https://i.pinimg.com/1200x/de/40/b9/de40b90d986cb37f0cdb4248c5da85f7.jpg"
+                alt=""
+              />
+              <h1>Daily Planer</h1>
+            </div>
+            <div class="motivation elem card" id="2">
+              <img
+                src="https://i.pinimg.com/736x/a3/ad/5b/a3ad5b3440452bb05e569b0283e678b3.jpg"
+                alt=""
+              />
+              <h1>Motivation</h1>
+            </div>
+            <div class="pomodoro elem card" id="3">
+              <img
+                src="https://i.pinimg.com/736x/e8/ab/56/e8ab56e2c9f96f6a557a8b0c4f2b983a.jpg"
+                alt=""
+              />
+              <h1>Pomodoro Timer</h1>
+            </div>
+            <div class="goal elem card" id="4">
+              <img
+                src="https://i.pinimg.com/736x/4c/96/7f/4c967fd1c6c672330cbb256c0a6aea7f.jpg"
+                alt=""
+              />
+              <h1>Daily Goals</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="todo fullElem">
+        <button class="back">Close</button>
+        <div class="todo-1">
+          <div class="left">
+            <h1 class="dashboard-title">Workflow.</h1>
+            <div class="input-container">
+              <span class="section-label">Create New Objective</span>
+              <input
+                type="text"
+                class="add-input add-title"
+                placeholder="Task summary..."
+              />
+              <textarea
+                class="add-input add-description"
+                placeholder="Detailed description..."
+              ></textarea>
+              <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem; ">
+                <input type="checkbox" class="custom-checkbox" />
+                <p style="font-size: small;">If It's <span class="text-urgent">Urgent</span></p>
+              </div>
+            </div>
+            <button class="summit">Summit</button>
+          </div>
+
+          <div class="right">
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 3rem;
+              "
+            >
+              <h2 style="font-size: 1.5rem; font-weight: 800">
+                Current Sprint
+              </h2>
+            </div>
+
+            <ul class="task-list">
+              <!-- Tasks will be dynamically added here -->
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="daily fullElem">
+        <button class="back">Close</button>
+        <div class="daily-1">
+          <div class="top">
+            <div class="brand">
+              <h1>DayStack</h1>
+              <p>Relational Planner</p>
+            </div>
+
+            <div class="controls">
+              <div>
+                <p
+                  style="
+                    font-size: 0.6rem;
+                    font-weight: 800;
+                    color: #64748b;
+                    letter-spacing: 0.1em;
+                  "
+                >
+                  ACTIVE SESSION
+                </p>
+                <p>TUESDAY, DEC 23</p>
+              </div>
+            </div>
+          </div>
+          <div class="buttom">
+            <div class="timeline">
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">08:00</span
+                    ><span class="time-range">to 09:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">09:00</span
+                    ><span class="time-range">to 10:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">10:00</span
+                    ><span class="time-range">to 11:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">11:00</span
+                    ><span class="time-range">to 12:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">12:00</span
+                    ><span class="time-range">to 01:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">01:00</span
+                    ><span class="time-range">to 02:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">02:00</span
+                    ><span class="time-range">to 03:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">03:00</span
+                    ><span class="time-range">to 04:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">04:00</span
+                    ><span class="time-range">to 05:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">05:00</span
+                    ><span class="time-range">to 06:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">06:00</span
+                    ><span class="time-range">to 07:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">07:00</span
+                    ><span class="time-range">to 08:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+
+              <div class="hour-block">
+                <div class="hour-header">
+                  <div class="time-wrap">
+                    <span class="time-label">08:00</span
+                    ><span class="time-range">to 09:00</span>
+                  </div>
+                </div>
+                <textarea
+                  class="task-input"
+                  placeholder="What you have to do..."
+                  rows="2"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="moti fullElem">
+        <button class="back">Close</button>
+        <div class="moti-1">
+          <div class="background">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+          </div>
+
+          <div class="container motivation-container">
+            <div class="quote-wrapper">
+              <span class="quote-mark">“</span>
+              <p id="quote-text">Harness your focus. Master your day.</p>
+              <p id="quote-author">— Perspective</p>
+              <span class="quote-mark">“</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fullElem pomodoro">
+        <button class="back">Close</button>
+        <div class="pomodoro-1">
+          <div class="liquid-bg" id="liquid"></div>
+    <div class="ambient"></div>
+
+    <div class="main-card" id="card">
+      <div class="mode-tabs">
+        <div class="mode-tab">
+          <input type="radio" name="mode" id="work-mode" value="work" checked />
+          <label for="work-mode" class="mode-label">Focus</label>
+        </div>
+        <div class="mode-tab">
+          <input type="radio" name="mode" id="break-mode" value="break" />
+          <label for="break-mode" class="mode-label">Zen</label>
+        </div>
+      </div>
+
+      <div class="timer-wrap">
+        <div class="status-header">
+          <div class="status-indicator"></div>
+          <span class="status-text" id="status">Stationary</span>
+        </div>
+        <div class="time-val" id="display">25:00</div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" id="reset-btn">Reset</button>
+        <button class="btn btn-main" id="start-btn">Start Session</button>
+      </div>
+    </div>
+        </div>
+      </section>
+      <section class="fullElem goals">
+        <button class="back">Close</button>
+        <div class="goals-1">
+          <div class="goals-container">
+        <header class="header">
+            <div>
+                <p>Objective</p>
+                <h1>Daily Goals.</h1>
+            </div>
+            <div id="date-display" style="font-size: 0.75rem; font-weight: 800; color: var(--text-dim);">DECEMBER 26</div>
+        </header>
+
+        <div class="progress-wrapper">
+            <div class="progress-meta">
+                <span>Daily Completion</span>
+                <span id="progress-percent">0%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progress-bar"></div>
+            </div>
+        </div>
+
+        <ul class="goals-list" id="goals-list"></ul>
+
+        <div class="empty-state" id="empty-state">
+            <div style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.4;">📋</div>
+            <p>Your agenda is clear.<br>Capture your first objective below.</p>
+        </div>
+
+        <input type="text" class="add-goal-input" id="goal-input" placeholder="What needs to be done today?" autocomplete="off">
+    </div>
+        </div>
+      </section>
+      <div class="welcome">
+        <div class="welcome-1">
+            <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- The Popup Modal -->
+    <div class="welcome-modal" id="modal">
+        <div class="modal-card">
+            <h2>DayStack.</h2>
+            <p>Welcome to your relational workspace.<br>What should we call you today?</p>
+            
+            <input type="text" class="name-input" id="name-input" placeholder="Enter your name" autocomplete="off">
+            
+            <button class="entry-btn" id="submit-btn">Continue</button>
+        </div>
+    </div>
+
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
