@@ -1,14 +1,3 @@
-function setLocalStorageWithExpiry(key, value) {
-  const now = new Date();
-  const ONE_DAY = 24 * 60 * 60 * 1000;
-  const item = {
-    value: value,
-    expiry: now.getTime() + ONE_DAY,
-  };
-
-  localStorage.setItem(key, JSON.stringify(item));
-}
-
 let main = () => {
   let elems = document.querySelectorAll(".elem");
   let fullElems = document.querySelectorAll(".fullElem");
@@ -230,7 +219,7 @@ const renderTodoList = () => {
 
 renderTodoList();
 const addToLocalStorage = (todoList) => {
-  setLocalStorageWithExpiry("todoList", JSON.stringify(todoList));
+  localStorage.setItem("todoList", JSON.stringify(todoList));
 };
 const addTaskBtn = document.querySelector(".summit");
 
